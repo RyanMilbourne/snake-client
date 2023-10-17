@@ -9,8 +9,26 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   conn.on("data", () => {
-    console.log("🐍 hsssssssssss 🐍\n🔥💀 u r dead 💀🔥\n u idled 4 2 long\n🐍 hsssssssssss 🐍");
+    console.log(
+      `
+              🐍
+      🔥💀 U HAVE DIED 💀🔥
+        too many idleing
+        🐍 hissssssss 🐍
+      `
+    )
   });
+
+  conn.on("connect", () => {
+    console.log(
+      `
+      Congratulations Player!
+       You have successfully
+       entered the kigndom of
+          ⚔️🐍🔥 SNEK 🔥🐍⚔️`
+    )
+    conn.write("Name:  Neo")
+  })
 
   return conn
 }
