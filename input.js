@@ -22,10 +22,22 @@ const handleUserInput = function(key) {
     console.log(exitMessage, '\n')
     process.exit();
   }
-  if (key === 'w') { connection.write("Move: up"); }
-  if (key === 'a') { connection.write("Move: left"); }
-  if (key === 's') { connection.write("Move: down"); }
-  if (key === 'd') { connection.write("Move: right"); }
+  // switch key with the following cases
+  switch (key) {
+    // WASD controls to move up/left/down/right
+    case 'w': connection.write("Move: up");
+      break;
+    case 'a': connection.write("Move: left");
+      break;
+    case 's': connection.write("Move: down");
+      break;
+    case 'd': connection.write("Move: right");
+      break;
+    // canned messages
+    case 'o': connection.write("Say: pardon me!");
+      break;
+    case 'p': connection.write("Say: Hssss")
+  }
 };
 
 module.exports = {
