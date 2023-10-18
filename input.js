@@ -1,4 +1,5 @@
 // store the active TCP connection object
+const { exitMessage } = require("./constants");
 let connection;
 
 const setupInput = function(conn) {
@@ -12,11 +13,6 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key) {
-  const exitMessage = `
-      You have left
-  🐍 the snek kingdom 🐍
-    🖖 safe travels 🖖
-  `;
   // if user inputs q or ctrl+c, exit server
   if (key === 'q' || key === "\x03") {
     console.log(exitMessage, '\n')
