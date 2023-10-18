@@ -2,7 +2,7 @@ const net = require("net");
 const connect = function() {
 
   const welcomeMessage = `
-  🔥💀 WELCOME TO: 💀🔥
+  🔥💀 WELCOME  TO 💀🔥
    ⚔️🐍🔥💥 SNEK 💥🔥🐍⚔️
     🐍 hisssssssss 🐍
 `;
