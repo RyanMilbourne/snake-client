@@ -1,21 +1,11 @@
 const net = require("net");
+const { IP, PORT, welcomeMessage, idleMessage } = require("./constants");
+
 const connect = function() {
 
-  const welcomeMessage = `
-  🔥💀 WELCOME  TO 💀🔥
-   ⚔️🐍🔥💥 SNEK 💥🔥🐍⚔️
-    🐍 hisssssssss 🐍
-`;
-  const idleMessage = `
-         🐍
-🔥💀 U HAVE DIED 💀🔥
-  too many idleing
-  🐍 hisssssssss 🐍
-`;
-
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   conn.setEncoding("utf8");
