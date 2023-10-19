@@ -8,8 +8,8 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["When node play.js is first run and connection is secured"]()
-!["Playing in action with canned message"]()
+!["When node play.js is first run and connection is secured"](https://raw.githubusercontent.com/RyanMilbourne/snake-client/main/snek1.png))
+!["Playing in action with canned message"](https://raw.githubusercontent.com/RyanMilbourne/snake-client/main/snek2.png)
 
 
 ## Getting Started
