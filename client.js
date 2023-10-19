@@ -11,7 +11,7 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   conn.on("data", () => {
-    console.log(idleMessage)
+    console.log(idleMessage);
   });
 
   conn.on("connect", () => {
@@ -22,26 +22,9 @@ const connect = function() {
 
   });
 
-  /* Experiment moving our snake with 'hard-coding' using setTimeout and setInterval
-
-  conn.on('connect', () => {
-    setTimeout(() => {
-      conn.write('Move: up');
-      setTimeout(() => {
-        conn.write('Move: left');
-      }, 50);
-    }, 50);
-  });
-
-    conn.on('connect', () => {
-    setInterval(() => {
-      conn.write('Move: left')
-    }, 50)
-  })
-*/
-  return conn
-}
+  return conn;
+};
 
 module.exports = {
   connect
-}
+};
