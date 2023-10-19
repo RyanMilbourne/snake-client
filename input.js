@@ -16,7 +16,7 @@ const setupInput = function(conn) {
 const handleUserInput = function(key) {
   // if user inputs q or ctrl+c, exit server
   if (key === 'q' || key === "\x03") {
-    console.log(exitMessage, '\n')
+    console.log(exitMessage, '\n');
     process.exit();
   }
   // clear current interval (movement) before starting NEW interval (movement)
@@ -27,21 +27,29 @@ const handleUserInput = function(key) {
   switch (key) {
     // WASD controls to move up/left/down/right
     // if setInterval returns true, snake continues movement in direction
-    case 'w': intervalID = setInterval(() => { connection.write("Move: up"); }, 100);
+    case 'w': intervalID = setInterval(() => {
+      connection.write("Move: up");
+    }, 100);
       break;
-    case 'a': intervalID = setInterval(() => { connection.write("Move: left"); }, 100);
+    case 'a': intervalID = setInterval(() => {
+      connection.write("Move: left");
+    }, 100);
       break;
-    case 's': intervalID = setInterval(() => { connection.write("Move: down"); }, 100)
+    case 's': intervalID = setInterval(() => {
+      connection.write("Move: down");
+    }, 100);
       break;
-    case 'd': intervalID = setInterval(() => { connection.write("Move: right"); }, 100);
+    case 'd': intervalID = setInterval(() => {
+      connection.write("Move: right");
+    }, 100);
       break;
     // canned messages
     case 'o': connection.write("Say: pardon me!");
       break;
-    case 'p': connection.write("Say: Hssss")
+    case 'p': connection.write("Say: Hssss");
   }
 };
 
 module.exports = {
   setupInput
-}
+};
